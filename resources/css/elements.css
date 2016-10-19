@@ -1,0 +1,155 @@
+html, body, input, textarea, select{margin: 0em; font-family: Arial, Helvetica, sans-serif; font-size: 0.95em; color: #000000;}
+
+table thead tr{text-align: center;}
+table th{font-weight: bold;}
+
+table.style{width: 100%; border-collapse: collapse;}
+	table.style th, table.style td{border: .125em solid; border-color: #CCC; }
+	table.style tbody tr:hover{background: #CCC;}
+	
+table.checkered{}
+	table.checkered.style tbody th, table.checkered.style tbody td{border: 0em;}
+	
+	table.checkered tbody tr td:nth-child(odd){border-left: .125em solid #CCC;}
+		table.checkered tbody tr td:first-of-type{border-left: 0em; border-right: .125em solid #CCC;}
+			
+	table.checkered tbody tr:nth-child(odd){background: #E6E6E6;}
+	
+table.style tbody tr:hover, table.checkered tbody tr:hover{background: #CCC;}
+
+b, strong{font-weight: bold;} 
+
+i, em, dfn, var, cite{font-style: italic;} 
+
+del, strike, s{text-decoration: line-through;}
+
+u{text-decoration: underline;}
+
+mark{background: #FFFF00;}
+
+sub, sup{font-size: .70em;}
+
+code, pre, samp, kbd{font-family: "Courier New", Courier, monospace; font-size: .8em; white-space: pre-wrap;}
+
+small{font-size: .8em;}
+big{font-size: 1.4em;}
+
+a{cursor: pointer;}
+a, a:link, a:visited{text-decoration: none;}
+a, a:link, a:visited{color: #318b74;}
+	a.onIt{}
+a:hover{color: #20C073; text-decoration: underline;}
+
+p{margin-top: 0px; margin-bottom: 1em; display: block;}
+
+ul, ol{margin-top: 0px;}
+
+ul{list-style-type: disc;}
+	ul li ul{list-style-type: circle;}
+	ul li ul li ul{list-style-type: square;}
+
+hr{border-top: .15em dotted; border-right: 0px; border-bottom: 0px; border-left: 0px;}
+
+h1, h2, h3, h4, h5, h6{margin: 0px; padding: 0px;}
+	h1.bMargin, h2.bMargin, h3.bMargin, h4.bMargin, h5.bMargin, h6.bMargin{margin-bottom: 1em;}
+
+	h1{font-size: 1.6em;}
+	h2{font-size: 1.4em;}
+	h3{font-size: 1.2em;}
+	h4{font-size: 1em;}
+	h5{font-size: .8em;}
+	h6{font-size: .6em;}
+
+iframe, frameset, frame{margin: 0px; padding: 0px; border: 0em; outline: 0;}
+
+video, audio{}
+
+img, input[type="image"]{outline: 0px;}
+
+/* Start Of Form */
+fieldset{border: 0em; padding: 0em; margin: 0em; margin-top: 1em;}
+	fieldset legend{font-size: 1.2em; font-weight: bold;}
+	form fieldset:first-child{margin-top: 0em;}
+
+input:disabled, textarea:disabled, select:disabled{opacity: .2; background: #CDCDCD;}
+
+input.textF, select, textarea{outline: 0; border: 0em; background: #FFFFFF; padding: .125em .25em;}
+
+input.textF{width: 10em; text-align: left;}
+
+input[type="search"]{
+	-webkit-appearance: none;
+	background-image: url(../icons/search.png); background-repeat: no-repeat; padding-left: 20px;
+}
+
+input[type="number"]:not(.noPort){border-radius: 0em .5em .5em 0em;}
+	
+input[type="range"]{width: 90%; vertical-align: middle;}
+	input[type="range"].noPort{display: none;}
+	
+textarea{width: 100%; min-height: 10em; display: block;}
+
+select{-webkit-appearance: menulist-button;}
+	select[multiple]{vertical-align: middle; border-right: 0em solid; border-radius: 0em .25em .25em 0em;}
+
+input[type="radio"], input[type="checkbox"]{}
+
+button, input[type="button"], input[type="submit"], input[type="reset"]{padding: .125em .5em; vertical-align: bottom; border: .125em solid #d1d1d1; background:#f2f2f2; cursor: pointer;}
+	button:hover, input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover{color: #444;}
+
+input.invalid, select.invalid{border-bottom: 2px dotted rgba(255, 0, 0, 0.6);}
+textarea.invalid{border-left: 2px dotted rgba(255, 0, 0, 0.6); border-bottom: 2px dotted rgba(255, 0, 0, 0.6);}
+
+/* jBackups */
+.numberCon{font-size: 1.1em; font-weight: bold; display: inline-block; margin-left: .125em; vertical-align: middle;}
+	.numberCon a{display: block; vertical-align: middle; opacity: 0.5; cursor: pointer;  }
+	.numberCon a:hover{opacity: 1;}
+	.numberCon .down{}
+
+/* An Input */
+/* 
+	<div class="anInput">
+		<div class="name"><label></label>:</div>
+		<div class="theInput"></div>
+	</div>
+*/
+.anInput{display: table-row;}
+	.anInput .name{display: table-cell; padding-right: .5em; white-space: nowrap; vertical-align: middle;}
+	.anInput .theInput{display: table-cell;}
+	
+html:not(.chrome) .anInput .theInput{padding-bottom: .25em;}
+
+/* End Of Form */
+
+/* Start Of Media " " */
+/* ClassNames */
+.goLeft{float: left;} .goRight{float: right;}
+
+.swm{display: none;} .hwm{display: block;}
+	@media screen and (max-width: 70em) {	
+		.swm{display: block;} .hwm{display: none;}
+	}
+
+.onlyPrint{display: none;} .printThis{} .dontPrint{}
+	@media print{.onlyPrint, .printThis{display: block;} .dontPrint{display: none;}}
+
+/* 
+	OTHER MEDIA QUERIES:
+		(orientation: portrait || landscape)
+		
+	MEDIA QUERI.ES SIZES:
+		Smartphone = 320px
+		Tablet = 768px
+		Netbook = 1024px
+		Desktop = 1600px
+
+	http://www.w3.org/TR/css3-mediaqueries/
+*/
+/* End Of Media " " */
+
+
+
+
+
+
+

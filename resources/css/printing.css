@@ -1,0 +1,25 @@
+/* Elements */
+body{font-family: "Times New Roman", Times, serif; font-size: 1.4em;}
+
+.alignleft{display: inline; float: left; padding-right: .5em;}
+.alignright{display: inline; float: right; padding-left: .5em;}
+.aligncenter{clear: both; display: block; margin-left: auto; margin-right: auto;}
+
+#hellobar-container, #hellobar-wrapper, #hellobar-open{display: none;}
+
+/* Template Layout */
+#everything{width: 100%;}
+	#layout-header, #main-menu{display: none;}
+	
+	#layout-theMiddle{}
+		#layout-content{width: 100%; display: block;}
+			.fb-like{display: none;}
+			#entry-item #_bottom{display: none;}
+	
+		#layout-sidebarA{display: none;}
+
+	#layout-footer{display: none;}
+
+#topLink{display: none;}
+
+.popup_con{display: none;}
